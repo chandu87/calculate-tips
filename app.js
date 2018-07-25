@@ -44,6 +44,15 @@ let marco = {
         }
     }
 }
+function avgTips(tipsArr){
+    let sum = 0;
+    tipsArr.forEach(element => {
+        sum += element;
+    });
+    return sum/tipsArr.length;
+}
 philip.calcTips();
 marco.calcTips();
+philip.avgTips = avgTips(philip.tips);
+marco.avgTips = avgTips(marco.tips);
 console.log(philip, marco);
